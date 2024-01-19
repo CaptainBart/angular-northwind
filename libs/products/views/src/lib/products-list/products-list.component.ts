@@ -9,7 +9,6 @@ import { ListComponent } from '@nw/shared-data-directives';
   imports: [CommonModule],
   templateUrl: './products-list.component.html',
   styleUrl: './products-list.component.css',
-  providers: [{provide: ListComponent<Product>, useExisting: forwardRef(() => ProductsListComponent)}]
+  providers: [{ provide: ListComponent<Product>, useExisting: forwardRef(() => ProductsListComponent) }],
 })
-export class ProductsListComponent extends ListComponent<Product> {
-}
+export class ProductsListComponent extends ListComponent<Product> {}

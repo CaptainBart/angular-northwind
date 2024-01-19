@@ -14,9 +14,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain(
-      'Welcome angular-arch-nx'
-    );
+    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome angular-arch-nx');
   });
 
   it(`should have as title 'angular-arch-nx'`, () => {

@@ -10,6 +10,6 @@ export function injectGetProductsByCategory(): getProductsByCategory {
   const http = inject(HttpClient);
   return (cagegoryId: number) =>
     http.get<ODataEnvelope<Product[]>>(
-      'https://services.odata.org/V4/Northwind/Northwind.svc/Products?$filter=CategoryID%20eq%20' + cagegoryId
+      'https://services.odata.org/V4/Northwind/Northwind.svc/Products?$filter=CategoryID%20eq%20' + cagegoryId,
     );
 }

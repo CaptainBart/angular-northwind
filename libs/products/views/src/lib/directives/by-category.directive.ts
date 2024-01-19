@@ -11,7 +11,7 @@ export class ByCategoryDirective implements OnInit {
   private readonly list = inject(ListComponent<Product>);
   private readonly getProducts = injectGetProductsByCategory();
 
-  @Input({required: true})
+  @Input({ required: true })
   nwByCategory: number = 0;
 
   async ngOnInit() {
