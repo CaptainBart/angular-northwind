@@ -1,1 +1,1 @@
-export * from './lib/shared-data-directives/shared-data-directives.component';
+export * from './lib/list.component';

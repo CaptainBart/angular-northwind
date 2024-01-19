@@ -1,7 +1,7 @@
 import { Component, forwardRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Product } from '@nw/products/data-access';
-import { ListComponent } from '../products-list';
+import { Product } from '@nw/products-data-access';
+import { ListComponent } from '@nw/shared-data-directives';
 
 @Component({
   selector: 'nw-products-list',

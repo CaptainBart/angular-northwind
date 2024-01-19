@@ -1,6 +1,6 @@
 import { Directive, OnInit, inject } from '@angular/core';
-import { ListComponent } from '../products-list';
-import { Product, injectGetProducts } from '@nw/products/data-access';
+import { ListComponent } from '@nw/shared-data-directives';
+import { Product, injectGetProducts } from '@nw/products-data-access';
 import { firstValueFrom } from 'rxjs';
 
 @Directive({

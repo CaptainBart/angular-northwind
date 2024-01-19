@@ -1,6 +1,6 @@
 import { Directive, inject } from '@angular/core';
-import { ListComponent } from '../products-list';
-import { Product } from '@nw/products/data-access';
+import { ListComponent } from '@nw/shared-data-directives';
+import { Product } from '@nw/products-data-access';
 
 @Directive({
   selector: '[nwStatic]',

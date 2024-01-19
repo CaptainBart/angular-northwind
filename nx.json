@@ -56,11 +56,15 @@
     },
     "@nx/angular:library": {
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "buildable": true,
+      "displayBlock": true,
+      "flat": true,
+      "prefix": "nw",
+      "simpleName": true
     },
     "@nx/angular:component": {
-      "style": "css",
-      "buildable": true
+      "style": "css"
     }
   }
 }

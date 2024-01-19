@@ -13,7 +13,7 @@ export const routes: Route[] = [
         children: [
             {
                 path: 'products',
-                loadChildren: async () => (await import('@nw/products/pages')).routes,
+                loadChildren: async () => (await import('@nw/products-pages')).routes,
             },
         ]
     },

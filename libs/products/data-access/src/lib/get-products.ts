@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { Observable } from 'rxjs';
-import { ODataEnvelope } from './odata-envelope';
+import { ODataEnvelope } from '@nw/shared-data-access';
 import { Product } from './product';
 
 export type GetProductsResponse = ODataEnvelope<Product[]>;
