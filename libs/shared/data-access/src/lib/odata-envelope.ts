@@ -1,4 +1,3 @@
-export interface ODataEnvelope<T>
-{
+export interface ODataEnvelope<T> {
   value: T;
 }
