@@ -9,5 +9,5 @@ export type getProducts = () => Observable<GetProductsResponse>;
 
 export function injectGetProducts(): getProducts {
   const http = inject(HttpClient);
-  return () => http.get<GetProductsResponse>("https://services.odata.org/V4/Northwind/Northwind.svc/Products");
-};
+  return () => http.get<GetProductsResponse>('https://services.odata.org/V4/Northwind/Northwind.svc/Products');
+}

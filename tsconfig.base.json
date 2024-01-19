@@ -19,9 +19,7 @@
       "@nw/products-pages": ["libs/products/pages/src/index.ts"],
       "@nw/products-views": ["libs/products/views/src/index.ts"],
       "@nw/shared-data-access": ["libs/shared/data-access/src/index.ts"],
-      "@nw/shared-data-directives": [
-        "libs/shared/data-directives/src/index.ts"
-      ],
+      "@nw/shared-data-directives": ["libs/shared/data-directives/src/index.ts"],
       "@nw/shared-ui": ["libs/shared/ui/src/index.ts"],
       "@nw/shell": ["libs/shell/src/index.ts"]
     }
