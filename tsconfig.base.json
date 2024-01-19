@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@nw/products-data-access": ["libs/products/data-access/src/index.ts"],
+      "@nw/products-data-directives": ["libs/products/data-directives/src/index.ts"],
       "@nw/products-pages": ["libs/products/pages/src/index.ts"],
       "@nw/products-views": ["libs/products/views/src/index.ts"],
       "@nw/shared-data-access": ["libs/shared/data-access/src/index.ts"],

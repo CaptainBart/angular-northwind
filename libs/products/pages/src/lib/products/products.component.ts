@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProductsListComponent, DefaultDirective, ByCategoryDirective } from '@nw/products-views';
+import { ProductsListComponent } from '@nw/products-views';
+import { DefaultDirective, ByCategoryDirective } from '@nw/products-data-directives';
 
 @Component({
   standalone: true,
