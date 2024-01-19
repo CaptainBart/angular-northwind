@@ -15,10 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-arch-nx/products/data-access": [
-        "libs/products/data-access/src/index.ts"
-      ],
-      "@angular-arch-nx/products/views": ["libs/products/views/src/index.ts"]
+      "@nw/products/data-access": ["libs/products/data-access/src/index.ts"],
+      "@nw/products/pages": ["libs/products/pages/src/index.ts"],
+      "@nw/products/views": ["libs/products/views/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

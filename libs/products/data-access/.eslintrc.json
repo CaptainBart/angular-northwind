@@ -21,7 +21,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "angular-arch-nx",
+            "prefix": "nw",
             "style": "kebab-case"
           }
         ]

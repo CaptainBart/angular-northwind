@@ -2,7 +2,7 @@
   "name": "angular-arch-nx",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "prefix": "angular-arch-nx",
+  "prefix": "nw",
   "sourceRoot": "apps/angular-arch-nx/src",
   "tags": [],
   "targets": {

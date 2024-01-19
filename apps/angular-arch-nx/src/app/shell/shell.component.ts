@@ -11,7 +11,7 @@ import { map, shareReplay } from 'rxjs/operators';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'angular-arch-nx-shell',
+  selector: 'nw-shell',
   templateUrl: './shell.component.html',
   styleUrls: ['./shell.component.css'],
   standalone: true,

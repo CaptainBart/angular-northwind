@@ -2,7 +2,7 @@
   "name": "products-views",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/products/views/src",
-  "prefix": "angular-arch-nx",
+  "prefix": "nw",
   "tags": [],
   "projectType": "library",
   "targets": {
