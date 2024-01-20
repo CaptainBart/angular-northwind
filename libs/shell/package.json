@@ -5,9 +5,9 @@
     "@angular/common": "^17.0.0",
     "@angular/core": "^17.0.0",
     "@angular/router": "~17.0.0",
-    "@nw/products-pages": "*",
     "@angular/cdk": "^17.0.4",
-    "@angular/material": "^17.0.4"
+    "@angular/material": "^17.0.4",
+    "@nw/products-feature": "*"
   },
   "dependencies": {},
   "sideEffects": false
