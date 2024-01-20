@@ -1,7 +1,7 @@
 {
-  "name": "products-pages",
+  "name": "products-feature",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/products/pages/src",
+  "sourceRoot": "libs/products/feature/src",
   "prefix": "nw",
   "tags": [],
   "projectType": "library",
@@ -10,14 +10,14 @@
       "executor": "@nx/angular:ng-packagr-lite",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
-        "project": "libs/products/pages/ng-package.json"
+        "project": "libs/products/feature/ng-package.json"
       },
       "configurations": {
         "production": {
-          "tsConfig": "libs/products/pages/tsconfig.lib.prod.json"
+          "tsConfig": "libs/products/feature/tsconfig.lib.prod.json"
         },
         "development": {
-          "tsConfig": "libs/products/pages/tsconfig.lib.json"
+          "tsConfig": "libs/products/feature/tsconfig.lib.json"
         }
       },
       "defaultConfiguration": "production"
@@ -26,7 +26,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/products/pages/jest.config.ts"
+        "jestConfig": "libs/products/feature/jest.config.ts"
       }
     },
     "lint": {
