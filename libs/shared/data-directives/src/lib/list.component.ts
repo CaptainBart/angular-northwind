@@ -1,18 +1,33 @@
 import { Component, Input } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { OrderBy } from './order-by';
+import { OrderBy, EMPTY } from './order-by';
+import { Paging, DEFAULT_PAGING } from './paging';
 
 @Component({ template: '' })
 export abstract class ListComponent<T = unknown> {
-  initialOrderBy: OrderBy<T> = { field: '', direction: '' };
-  #orderBy = new BehaviorSubject<OrderBy<T>>(this.initialOrderBy);
-
   @Input()
   items: T[] = [];
 
+  initialOrderBy: OrderBy<T> = EMPTY;
+  #orderBy = new BehaviorSubject<OrderBy<T>>(this.initialOrderBy);
   orderBy$ = this.#orderBy.asObservable();
+
+  initialPaging: Paging = DEFAULT_PAGING;
+  #paging = new BehaviorSubject<Paging>(this.initialPaging);
+  paging$ = this.#paging.asObservable();
+
+  #totalCount = new BehaviorSubject<number>(0);
+  totalCount$ = this.#totalCount.asObservable();
 
   orderByChanged(orderBy: OrderBy<T>): void {
     this.#orderBy.next(orderBy);
+  }
+
+  changePaging(paging: Paging): void {
+    this.#paging.next(paging);
+  }
+
+  changeTotalCount(count: number) {
+    this.#totalCount.next(count);
   }
 }

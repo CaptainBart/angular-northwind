@@ -1,16 +1,25 @@
 import { Directive } from '@angular/core';
-import { ListDirective, OrderBy } from '@nw/shared-data-directives';
+import { GetItemsOptions, ListDirective } from '@nw/shared-data-directives';
 import { Product, injectGetProducts } from '@nw/products-data-access';
-import { Observable, map } from 'rxjs';
+import { Observable, map, tap } from 'rxjs';
 
 @Directive({
   selector: '[nwDefault]',
   standalone: true,
 })
 export class DefaultDirective extends ListDirective<Product> {
-  private readonly getProducts = injectGetProducts();
+  readonly #getProducts = injectGetProducts();
 
-  protected getItems(orderBy: OrderBy<Product>): Observable<Product[]> {
-    return this.getProducts({ orderBy: orderBy.field, orderByDirection: orderBy.direction }).pipe(map((response) => response.value));
+  protected getItems(options: GetItemsOptions): Observable<Product[]> {
+    return this.#getProducts({
+      orderBy: options.orderBy.field,
+      orderByDirection: options.orderBy.direction,
+      top: options.paging.pageSize,
+      skip: options.paging.pageSize * options.paging.page,
+      count: true,
+    }).pipe(
+      tap((response) => this.changeTotalCount(response['@odata.count'] ?? response.value.length)),
+      map((response) => response.value),
+    );
   }
 }
