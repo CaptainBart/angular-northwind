@@ -9,10 +9,8 @@ import { Observable, map } from 'rxjs';
 })
 export class DefaultDirective extends ListDirective<Product> {
   private readonly getProducts = injectGetProducts();
-  
+
   protected getItems(orderBy: OrderBy<Product>): Observable<Product[]> {
-    return this.getProducts({orderBy: orderBy.field, orderByDirection: orderBy.direction}).pipe(
-      map(response => response.value)
-    )
+    return this.getProducts({ orderBy: orderBy.field, orderByDirection: orderBy.direction }).pipe(map((response) => response.value));
   }
 }

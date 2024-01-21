@@ -1,10 +1,9 @@
-import { AfterViewInit, Component, DestroyRef, ViewChild, forwardRef, inject } from '@angular/core';
+import { Component, forwardRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { Product } from '@nw/products-data-access';
-import { ListComponent,  } from '@nw/shared-data-directives';
-import { MatSort, MatSortModule, Sort } from '@angular/material/sort';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+import { ListComponent, MatSortDirective } from '@nw/shared-data-directives';
+import { MatSortModule } from '@angular/material/sort';
 
 @Component({
   selector: 'nw-products-table',
@@ -13,6 +12,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     CommonModule,
     MatSortModule,
     MatTableModule,
+    MatSortDirective,
   ],
   templateUrl: './products-table.component.html',
   styleUrl: './products-table.component.css',
@@ -20,22 +20,11 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
     { provide: ListComponent<Product>, useExisting: forwardRef(() => ProductsTableComponent) },
   ],
 })
-export class ProductsTableComponent extends ListComponent<Product> implements AfterViewInit {
-  displayedColumns: string[] = ['ProductName', 'QuantityPerUnit', 'UnitPrice', 'UnitsInStock'];
-  #destroyRef = inject(DestroyRef);
+export class ProductsTableComponent extends ListComponent<Product> {
+  displayedColumns: Array<keyof Product> = ['ProductName', 'QuantityPerUnit', 'UnitPrice', 'UnitsInStock'];
 
   constructor() {
     super();
-    this.initialOrderBy = {field: "ProductName", direction: "asc"};
-  }
-
-  @ViewChild(MatSort) sort!: MatSort;
-
-  ngAfterViewInit() {
-    this.sort.sortChange.pipe(
-      takeUntilDestroyed(this.#destroyRef)
-    ).subscribe(
-      (sort: Sort) => this.orderByChanged({field: <"" | Extract<keyof Product, string>>sort.active, direction: sort.direction})
-    );
+    this.initialOrderBy = { field: 'ProductName', direction: 'asc' };
   }
 }

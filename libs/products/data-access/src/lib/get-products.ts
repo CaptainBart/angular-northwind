@@ -9,9 +9,6 @@ export type getProducts = (options?: ODataOptions<Product>) => Observable<GetPro
 
 export function injectGetProducts(): getProducts {
   const http = inject(HttpClient);
-  return (options?: ODataOptions<Product>) => 
-    http.get<GetProductsResponse>(
-      'https://services.odata.org/V4/Northwind/Northwind.svc/Products',
-      { params: formatODataParams(options) }
-    )
-};
+  return (options?: ODataOptions<Product>) =>
+    http.get<GetProductsResponse>('https://services.odata.org/V4/Northwind/Northwind.svc/Products', { params: formatODataParams(options) });
+}

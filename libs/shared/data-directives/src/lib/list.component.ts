@@ -4,15 +4,15 @@ import { OrderBy } from './order-by';
 
 @Component({ template: '' })
 export abstract class ListComponent<T = unknown> {
-  initialOrderBy: OrderBy<T> = {field: "", direction: ""};
+  initialOrderBy: OrderBy<T> = { field: '', direction: '' };
   #orderBy = new BehaviorSubject<OrderBy<T>>(this.initialOrderBy);
 
   @Input()
   items: T[] = [];
 
   orderBy$ = this.#orderBy.asObservable();
-  
-  protected orderByChanged(orderBy: OrderBy<T>): void {
+
+  orderByChanged(orderBy: OrderBy<T>): void {
     this.#orderBy.next(orderBy);
   }
 }
