@@ -19,11 +19,12 @@ export abstract class ListComponent<T = unknown> {
   #totalCount = new BehaviorSubject<number>(0);
   totalCount$ = this.#totalCount.asObservable();
 
-  orderByChanged(orderBy: OrderBy<T>): void {
+  changeOrderBy(orderBy: OrderBy<T>): void {
     this.#orderBy.next(orderBy);
   }
 
   changePaging(paging: Paging): void {
+    console.dir(paging);
     this.#paging.next(paging);
   }
 

@@ -10,7 +10,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "nw",
+            "prefix": ["nw", "mat"],
             "style": "camelCase"
           }
         ],
