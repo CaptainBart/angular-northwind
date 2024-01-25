@@ -10,20 +10,54 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nw/products-data-access": ["libs/products/data-access/src/index.ts"],
-      "@nw/products-data-directives": ["libs/products/data-directives/src/index.ts"],
-      "@nw/products-feature": ["libs/products/feature/src/index.ts"],
-      "@nw/products-ui": ["libs/products/ui/src/index.ts"],
-      "@nw/shared-data-access": ["libs/shared/data-access/src/index.ts"],
-      "@nw/shared-data-directives": ["libs/shared/data-directives/src/index.ts"],
-      "@nw/shared-ui": ["libs/shared/ui/src/index.ts"],
-      "@nw/shell": ["libs/shell/src/index.ts"]
+      "@nw/orders-data-access": [
+        "libs/orders/data-access/src/index.ts"
+      ],
+      "@nw/orders-data-directives": [
+        "libs/orders/data-directives/src/index.ts"
+      ],
+      "@nw/orders-feature": [
+        "libs/orders/feature/src/index.ts"
+      ],
+      "@nw/orders-data-ui": [
+        "libs/orders/ui/src/index.ts"
+      ],
+      "@nw/products-data-access": [
+        "libs/products/data-access/src/index.ts"
+      ],
+      "@nw/products-data-directives": [
+        "libs/products/data-directives/src/index.ts"
+      ],
+      "@nw/products-feature": [
+        "libs/products/feature/src/index.ts"
+      ],
+      "@nw/products-ui": [
+        "libs/products/ui/src/index.ts"
+      ],
+      "@nw/shared-data-access": [
+        "libs/shared/data-access/src/index.ts"
+      ],
+      "@nw/shared-data-directives": [
+        "libs/shared/data-directives/src/index.ts"
+      ],
+      "@nw/shared-ui": [
+        "libs/shared/ui/src/index.ts"
+      ],
+      "@nw/shell": [
+        "libs/shell/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
