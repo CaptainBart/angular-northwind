@@ -12,6 +12,8 @@ export class MatSortDirective<T = unknown> implements OnInit {
   #sort = inject(MatSort);
 
   constructor() {
+    this.#sort.active = this.#list.initialOrderBy.field;
+    this.#sort.direction = this.#list.initialOrderBy.direction;
     this.#sort.sortChange.pipe(takeUntilDestroyed()).subscribe((sort: Sort) => this.changeSort(sort));
   }
 

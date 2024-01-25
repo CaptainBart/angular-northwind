@@ -12,6 +12,10 @@ export class MatPaginatorDirective<T = unknown> implements OnInit {
   #paginator = inject(MatPaginator);
 
   constructor() {
+    this.#paginator.pageSizeOptions = [5, 10, 20, 50];
+    this.#paginator.pageIndex = this.#list.initialPaging.page;
+    this.#paginator.pageSize = this.#list.initialPaging.pageSize;
+
     this.#paginator.page
       .pipe(takeUntilDestroyed())
       .subscribe((pageEvent: PageEvent) => this.#list.changePaging({ page: pageEvent.pageIndex, pageSize: pageEvent.pageSize }));
