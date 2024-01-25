@@ -7,11 +7,21 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterModule } from '@angular/router';
+import { MatListItemRouterLinkDirective } from '@nw/shared-ui';
 
 @Component({
   selector: 'nw-shell',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule, RouterModule],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    RouterModule,
+    MatListItemRouterLinkDirective,
+  ],
   templateUrl: './shell.component.html',
   styleUrl: './shell.component.css',
 })
