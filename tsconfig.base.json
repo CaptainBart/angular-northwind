@@ -18,17 +18,26 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nw/customers-feature": [
+        "libs/customers/feature/src/index.ts"
+      ],
+      "@nw/employees-feature": [
+        "libs/employees/feature/src/index.ts"
+      ],
+      "@nw/home-feature": [
+        "libs/home/feature/src/index.ts"
+      ],
       "@nw/orders-data-access": [
         "libs/orders/data-access/src/index.ts"
       ],
       "@nw/orders-data-directives": [
         "libs/orders/data-directives/src/index.ts"
       ],
-      "@nw/orders-feature": [
-        "libs/orders/feature/src/index.ts"
-      ],
       "@nw/orders-data-ui": [
         "libs/orders/ui/src/index.ts"
+      ],
+      "@nw/orders-feature": [
+        "libs/orders/feature/src/index.ts"
       ],
       "@nw/products-data-access": [
         "libs/products/data-access/src/index.ts"
@@ -53,6 +62,9 @@
       ],
       "@nw/shell": [
         "libs/shell/src/index.ts"
+      ],
+      "@nw/suppliers-feature": [
+        "libs/suppliers/feature/src/index.ts"
       ]
     }
   },
