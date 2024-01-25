@@ -24,7 +24,6 @@ export abstract class ListComponent<T = unknown> {
   }
 
   changePaging(paging: Paging): void {
-    console.dir(paging);
     this.#paging.next(paging);
   }
 

@@ -23,7 +23,6 @@ export abstract class ListDirective<T = unknown> implements OnInit {
   protected abstract getItems(options: GetItemsOptions<T>): Observable<T[]>;
 
   protected changeTotalCount(count: number) {
-    console.dir(count);
     this.#list.changeTotalCount(count);
   }
 }

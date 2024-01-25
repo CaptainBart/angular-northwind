@@ -1,0 +1,46 @@
+<table mat-table [dataSource]="items" 
+  matSort
+  [matSortActive]="initialOrderBy.field"
+  [matSortDirection]="initialOrderBy.direction">
+  <ng-container matColumnDef="OrderID">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Order ID </th>
+    <td mat-cell *matCellDef="let order"> {{order.OrderID}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="CustomerID">
+    <th mat-header-cell *matHeaderCellDef> Customer </th>
+    <td mat-cell *matCellDef="let order"> {{order.CustomerID}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="OrderDate">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Order Placed On </th>
+    <td mat-cell *matCellDef="let order"> {{order.OrderDate | date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="RequiredDate">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Order Required On </th>
+    <td mat-cell *matCellDef="let order"> {{order.RequiredDate | date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ShipName">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Ship Name </th>
+    <td mat-cell *matCellDef="let order"> {{order.ShipName }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ShipAddress">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Ship Address </th>
+    <td mat-cell *matCellDef="let order"> {{order.ShipAddress}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ShipCity">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Ship CIty </th>
+    <td mat-cell *matCellDef="let order"> {{order.ShipCity}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+</mat-paginator>
