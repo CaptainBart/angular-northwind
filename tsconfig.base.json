@@ -21,8 +21,17 @@
       "@nw/customers-feature": [
         "libs/customers/feature/src/index.ts"
       ],
+      "@nw/employees-data-access": [
+        "libs/employees/data-access/src/index.ts"
+      ],
+      "@nw/employees-data-directives": [
+        "libs/employees/data-directives/src/index.ts"
+      ],
       "@nw/employees-feature": [
         "libs/employees/feature/src/index.ts"
+      ],
+      "@nw/employees-ui": [
+        "libs/employees/ui/src/index.ts"
       ],
       "@nw/home-feature": [
         "libs/home/feature/src/index.ts"

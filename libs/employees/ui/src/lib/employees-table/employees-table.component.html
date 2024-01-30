@@ -1,0 +1,30 @@
+<table mat-table [dataSource]="items" matSort>
+  <ng-container matColumnDef="EmployeeID">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Employee ID </th>
+    <td mat-cell *matCellDef="let employee"> {{employee.EmployeeID}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="LastName">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Full Name </th>
+    <td mat-cell *matCellDef="let employee"> {{employee.TitleOfCourtesy}} {{employee.LastName}}, {{employee.FirstName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Title">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Title </th>
+    <td mat-cell *matCellDef="let employee"> {{employee.Title}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="BirthDate">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> BirthDate </th>
+    <td mat-cell *matCellDef="let employee"> {{employee.BirthDate | date}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="HireDate">
+    <th mat-header-cell mat-sort-header *matHeaderCellDef> Hire Date </th>
+    <td mat-cell *matCellDef="let employee"> {{employee.HireDate | date}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator showFirstLastButtons aria-label="Select page of periodic elements">
+</mat-paginator>
