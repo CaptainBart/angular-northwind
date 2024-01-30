@@ -1,7 +1,9 @@
 {
   "name": "@nw/shared-data-access",
   "version": "0.0.1",
-  "peerDependencies": {},
+  "peerDependencies": {
+    "@angular/common": "17.1.1"
+  },
   "dependencies": {},
   "sideEffects": false
 }

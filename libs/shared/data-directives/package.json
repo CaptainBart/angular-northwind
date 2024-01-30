@@ -2,7 +2,9 @@
   "name": "@nw/shared-data-directives",
   "version": "0.0.1",
   "peerDependencies": {
-    "@angular/core": "^17.0.0"
+    "@angular/core": "^17.0.0",
+    "rxjs": "~7.8.0",
+    "@angular/material": "17.1.1"
   },
   "dependencies": {},
   "sideEffects": false

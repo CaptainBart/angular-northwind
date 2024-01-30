@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^17.0.0",
-    "@angular/core": "^17.0.0"
+    "@angular/core": "^17.0.0",
+    "@nw/orders-data-ui": "*",
+    "@nw/orders-data-directives": "*",
+    "@angular/router": "17.1.1"
   },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  },
+  "dependencies": {},
   "sideEffects": false
 }

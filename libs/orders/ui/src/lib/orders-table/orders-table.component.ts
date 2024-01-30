@@ -24,7 +24,7 @@ import { Order } from '@nw/orders-data-access';
   ],
 })
 export class OrdersTableComponent extends ListComponent<Order> {
-  displayedColumns: Array<keyof Order> = ['OrderID', 'CustomerID', 'OrderDate', 'RequiredDate', 'ShipName', 'ShipAddress', 'ShipCity'];
+  displayedColumns: (keyof Order)[] = ['OrderID', 'CustomerID', 'OrderDate', 'RequiredDate', 'ShipName', 'ShipAddress', 'ShipCity'];
 
   constructor() {
     super();

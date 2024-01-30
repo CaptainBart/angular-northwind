@@ -22,6 +22,6 @@ export class MatSortDirective<T = unknown> implements OnInit {
   }
 
   protected changeSort(sort: Sort): void {
-    this.#list.changeOrderBy({ field: <'' | Extract<keyof T, string>>sort.active, direction: sort.direction });
+    this.#list.changeOrderBy({ field: sort.active as '' | Extract<keyof T, string>, direction: sort.direction });
   }
 }

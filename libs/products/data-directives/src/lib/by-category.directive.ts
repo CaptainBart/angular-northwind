@@ -12,7 +12,7 @@ export class ByCategoryDirective implements OnInit {
   private readonly getProducts = injectGetProductsByCategory();
 
   @Input({ required: true })
-  nwByCategory: number = 0;
+  nwByCategory = 0;
 
   async ngOnInit() {
     const response = await firstValueFrom(this.getProducts(this.nwByCategory));

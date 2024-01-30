@@ -24,7 +24,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   ],
 })
 export class ProductsTableComponent extends ListComponent<Product> {
-  displayedColumns: Array<keyof Product> = ['ProductName', 'QuantityPerUnit', 'UnitPrice', 'UnitsInStock'];
+  displayedColumns: (keyof Product)[] = ['ProductName', 'QuantityPerUnit', 'UnitPrice', 'UnitsInStock'];
 
   constructor() {
     super();

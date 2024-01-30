@@ -6,7 +6,7 @@
     "@angular/core": "^17.0.0",
     "@nw/products-ui": "*",
     "@nw/products-data-directives": "*",
-    "@angular/router": "~17.0.0"
+    "@angular/router": "17.1.1"
   },
   "dependencies": {},
   "sideEffects": false
