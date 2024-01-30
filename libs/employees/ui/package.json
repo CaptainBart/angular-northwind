@@ -3,10 +3,11 @@
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^17.1.0",
-    "@angular/core": "^17.1.0"
+    "@angular/core": "^17.1.0",
+    "@angular/material": "17.1.1",
+    "@nw/shared-data-directives": "*",
+    "@nw/employees-data-access": "*"
   },
-  "dependencies": {
-    "tslib": "^2.3.0"
-  },
+  "dependencies": {},
   "sideEffects": false
 }
