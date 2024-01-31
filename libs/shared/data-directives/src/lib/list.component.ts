@@ -6,7 +6,8 @@ import { Paging, DEFAULT_PAGING } from './paging';
 @Component({ template: '' })
 export abstract class ListComponent<T = unknown> {
   items = signal<T[]>([]);
-  @Input({ alias: 'items' })
+
+  @Input({ alias: 'items' }) // eslint-disable-line @angular-eslint/no-input-rename
   set _items(value: T[]) {
     this.items.set(value);
   }

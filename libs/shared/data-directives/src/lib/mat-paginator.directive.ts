@@ -4,7 +4,7 @@ import { ListComponent } from './list.component';
 import { MatPaginator, PageEvent } from '@angular/material/paginator';
 
 @Directive({
-  selector: 'mat-paginator',
+  selector: 'mat-paginator', // eslint-disable-line @angular-eslint/directive-selector
   standalone: true,
 })
 export class MatPaginatorDirective<T = unknown> implements OnInit {
