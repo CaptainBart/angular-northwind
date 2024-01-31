@@ -18,8 +18,17 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nw/customers-data-access": [
+        "libs/customers/data-access/src/index.ts"
+      ],
+      "@nw/customers-data-directives": [
+        "libs/customers/data-directives/src/index.ts"
+      ],
       "@nw/customers-feature": [
         "libs/customers/feature/src/index.ts"
+      ],
+      "@nw/customers-ui": [
+        "libs/customers/ui/src/index.ts"
       ],
       "@nw/employees-data-access": [
         "libs/employees/data-access/src/index.ts"
@@ -72,8 +81,17 @@
       "@nw/shell": [
         "libs/shell/src/index.ts"
       ],
+      "@nw/suppliers-data-access": [
+        "libs/suppliers/data-access/src/index.ts"
+      ],
+      "@nw/suppliers-data-directives": [
+        "libs/suppliers/data-directives/src/index.ts"
+      ],
       "@nw/suppliers-feature": [
         "libs/suppliers/feature/src/index.ts"
+      ],
+      "@nw/suppliers-ui": [
+        "libs/suppliers/ui/src/index.ts"
       ]
     }
   },
