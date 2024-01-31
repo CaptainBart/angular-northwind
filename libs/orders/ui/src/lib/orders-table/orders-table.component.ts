@@ -1,4 +1,4 @@
-import { Component, forwardRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, forwardRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { ListComponent, MatSortDirective, MatPaginatorDirective } from '@nw/shared-data-directives';
@@ -9,6 +9,7 @@ import { Order } from '@nw/orders-data-access';
 @Component({
   selector: 'nw-orders-table',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     CommonModule,
     MatPaginatorModule,

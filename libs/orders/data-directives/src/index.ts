@@ -1,1 +1,1 @@
-export * from './lib/default.directive';
+export * from './lib/all-orders.directive';

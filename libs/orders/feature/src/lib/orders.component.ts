@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OrdersTableComponent } from '@nw/orders-data-ui';
-import { DefaultDirective } from '@nw/orders-data-directives';
+import { AllOrdersDirective } from '@nw/orders-data-directives';
 
 @Component({
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     CommonModule,
     OrdersTableComponent,
-    DefaultDirective,
+    AllOrdersDirective,
   ],
   templateUrl: './orders.component.html',
   styleUrl: './orders.component.css',

@@ -17,7 +17,7 @@ export abstract class ListDirective<T = unknown> implements OnInit {
         switchMap(([paging, orderBy]) => this.getItems({ paging, orderBy })),
         takeUntilDestroyed(this.#destroyRef),
       )
-      .subscribe((items) => (this.#list.items = items));
+      .subscribe((items) => (this.#list.items.set(items)));
   }
 
   protected abstract getItems(options: GetItemsOptions<T>): Observable<T[]>;

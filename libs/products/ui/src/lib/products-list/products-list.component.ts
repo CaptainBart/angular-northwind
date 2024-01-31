@@ -1,4 +1,4 @@
-import { Component, forwardRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, forwardRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '@nw/products-data-access';
 import { ListComponent } from '@nw/shared-data-directives';
@@ -6,6 +6,7 @@ import { ListComponent } from '@nw/shared-data-directives';
 @Component({
   selector: 'nw-products-list',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [CommonModule],
   templateUrl: './products-list.component.html',
   styleUrl: './products-list.component.css',

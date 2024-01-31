@@ -1,4 +1,4 @@
-import { Component, forwardRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, forwardRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { Product } from '@nw/products-data-access';
@@ -9,6 +9,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 @Component({
   selector: 'nw-products-table',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     CommonModule,
     MatPaginatorModule,

@@ -1,13 +1,16 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, signal } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { OrderBy, EMPTY } from './order-by';
 import { Paging, DEFAULT_PAGING } from './paging';
 
 @Component({ template: '' })
 export abstract class ListComponent<T = unknown> {
-  @Input()
-  items: T[] = [];
-
+  items = signal<T[]>([]);
+  @Input({ alias: 'items' })
+  set _items(value: T[]) {
+    this.items.set(value);
+  }
+  
   initialOrderBy: OrderBy<T> = EMPTY;
   #orderBy = new BehaviorSubject<OrderBy<T>>(this.initialOrderBy);
   orderBy$ = this.#orderBy.asObservable();

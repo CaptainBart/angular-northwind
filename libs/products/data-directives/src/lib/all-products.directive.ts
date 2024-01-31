@@ -4,10 +4,10 @@ import { Product, injectGetProducts } from '@nw/products-data-access';
 import { Observable, map, tap } from 'rxjs';
 
 @Directive({
-  selector: '[nwDefault]',
+  selector: '[bindAllProducts]',
   standalone: true,
 })
-export class DefaultDirective extends ListDirective<Product> {
+export class AllProductsDirective extends ListDirective<Product> {
   readonly #getProducts = injectGetProducts();
 
   protected getItems(options: GetItemsOptions): Observable<Product[]> {

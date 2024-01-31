@@ -3,14 +3,14 @@ import { ListComponent } from '@nw/shared-data-directives';
 import { Product } from '@nw/products-data-access';
 
 @Directive({
-  selector: '[nwStatic]',
+  selector: '[bindStatic]',
   standalone: true,
 })
 export class StaticDirective {
   private readonly list = inject(ListComponent<Product>);
 
   constructor() {
-    this.list.items = [
+    this.list.items.set([
       {
         ProductID: 1,
         ProductName: 'Chai',
@@ -23,6 +23,6 @@ export class StaticDirective {
         ReorderLevel: 10,
         Discontinued: true,
       },
-    ];
+    ]);
   }
 }

@@ -4,10 +4,10 @@ import { Order, injectGetOrders } from '@nw/orders-data-access';
 import { Observable, map, tap } from 'rxjs';
 
 @Directive({
-  selector: '[nwDefault]',
+  selector: '[bindAllOrders]',
   standalone: true,
 })
-export class DefaultDirective extends ListDirective<Order> {
+export class AllOrdersDirective extends ListDirective<Order> {
   readonly #getOrders = injectGetOrders();
 
   protected getItems(options: GetItemsOptions): Observable<Order[]> {

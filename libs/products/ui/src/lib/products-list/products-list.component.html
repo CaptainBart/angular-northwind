@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    @for (product of items; track product.ProductID) {
+    @for (product of items(); track product.ProductID) {
     <tr>
       <td>{{ product.ProductID }}</td>
       <td>{{ product.ProductName }}</td>

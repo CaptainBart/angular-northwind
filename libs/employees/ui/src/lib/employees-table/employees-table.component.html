@@ -1,4 +1,4 @@
-<table mat-table [dataSource]="items" matSort>
+<table mat-table [dataSource]="items()" matSort>
   <ng-container matColumnDef="EmployeeID">
     <th mat-header-cell mat-sort-header *matHeaderCellDef> Employee ID </th>
     <td mat-cell *matCellDef="let employee"> {{employee.EmployeeID}} </td>

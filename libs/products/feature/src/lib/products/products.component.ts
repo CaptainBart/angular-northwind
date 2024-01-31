@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductsTableComponent } from '@nw/products-ui';
-import { DefaultDirective, ByCategoryDirective } from '@nw/products-data-directives';
+import { AllProductsDirective } from '@nw/products-data-directives';
 
 @Component({
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     CommonModule,
     ProductsTableComponent,
-    DefaultDirective,
-    ByCategoryDirective,
+    AllProductsDirective,
   ],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css',
