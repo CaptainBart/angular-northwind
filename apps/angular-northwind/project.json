@@ -16,7 +16,7 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/angular-northwind/tsconfig.app.json",
         "assets": ["apps/angular-northwind/src/favicon.ico", "apps/angular-northwind/src/assets"],
-        "styles": ["@angular/material/prebuilt-themes/deeppurple-amber.css", "apps/angular-northwind/src/styles.css"],
+        "styles": ["@angular/material/prebuilt-themes/indigo-pink.css", "apps/angular-northwind/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
