@@ -20,7 +20,9 @@ export class MatPaginatorDirective<T = unknown> implements OnInit {
       .pipe(takeUntilDestroyed())
       .subscribe((pageEvent: PageEvent) => this.#list.changePaging({ page: pageEvent.pageIndex, pageSize: pageEvent.pageSize }));
 
-    this.#list.totalCount$.pipe(takeUntilDestroyed()).subscribe((count) => (this.#paginator.length = count));
+    this.#list.totalCount$
+      .pipe(takeUntilDestroyed())
+      .subscribe(count => (this.#paginator.length = count));
   }
 
   ngOnInit(): void {

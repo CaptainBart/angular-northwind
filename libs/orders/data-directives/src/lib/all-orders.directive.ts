@@ -18,8 +18,8 @@ export class AllOrdersDirective extends ListDirective<Order> {
       skip: options.paging.pageSize * options.paging.page,
       count: true,
     }).pipe(
-      tap((response) => this.changeTotalCount(response['@odata.count'] ?? response.value.length)),
-      map((response) => response.value),
+      tap(response => this.changeTotalCount(response['@odata.count'] ?? response.value.length)),
+      map(response => response.value),
     );
   }
 }

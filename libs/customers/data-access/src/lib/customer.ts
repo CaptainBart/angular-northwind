@@ -9,5 +9,5 @@ export interface Customer {
   PostalCode: string;
   Country: string;
   Phone: string;
-  Fax: string
+  Fax: string;
 }

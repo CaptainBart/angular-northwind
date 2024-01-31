@@ -18,8 +18,8 @@ export class AllEmployeesDirective extends ListDirective<Employee> {
       skip: options.paging.pageSize * options.paging.page,
       count: true,
     }).pipe(
-      tap((response) => this.changeTotalCount(response['@odata.count'] ?? response.value.length)),
-      map((response) => response.value),
+      tap(response => this.changeTotalCount(response['@odata.count'] ?? response.value.length)),
+      map(response => response.value),
     );
   }
 }

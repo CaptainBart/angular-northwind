@@ -23,7 +23,7 @@ import { Customer } from '@nw/customers-data-access';
   providers: [
     { provide: ListComponent<Customer>, useExisting: forwardRef(() => CustomersTableComponent) },
   ],
-  
+
 })
 export class CustomersTableComponent extends ListComponent<Customer> {
   displayedColumns: (keyof Customer)[] = ['CustomerID', 'CompanyName', 'ContactName', 'Address', 'City', 'Country'];

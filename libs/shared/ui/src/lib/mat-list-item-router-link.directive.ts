@@ -14,15 +14,15 @@ export class MatListItemRouterLinkDirective {
   #router = inject(Router);
 
   #active$ = this.#router.events.pipe(
-    filter((e) => e instanceof NavigationEnd),
+    filter(e => e instanceof NavigationEnd),
     map(() =>
       this.#link.urlTree
         ? this.#router.isActive(this.#link.urlTree, {
-            paths: 'exact',
-            fragment: 'ignored',
-            queryParams: 'ignored',
-            matrixParams: 'ignored',
-          })
+          paths: 'exact',
+          fragment: 'ignored',
+          queryParams: 'ignored',
+          matrixParams: 'ignored',
+        })
         : false,
     ),
   );
@@ -30,6 +30,6 @@ export class MatListItemRouterLinkDirective {
   constructor() {
     this.#active$
       .pipe(takeUntilDestroyed())
-      .subscribe((isActive) => (this.#listItem.activated = isActive));
+      .subscribe(isActive => (this.#listItem.activated = isActive));
   }
 }

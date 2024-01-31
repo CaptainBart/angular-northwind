@@ -18,14 +18,25 @@
               }
             ]
           }
-        ],
-        "@stylistic/eol-last": ["error", "always"]
+        ]
       }
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": ["plugin:@nx/typescript"],
-      "rules": {}
+      "extends": ["plugin:@nx/typescript", "plugin:@stylistic/recommended-extends"],
+      "rules": {
+        "@stylistic/eol-last": ["error", "always"],
+        "@stylistic/semi": ["error", "always"],
+        "@stylistic/member-delimiter-style": [
+          "error",
+          {
+            "multiline": {
+              "delimiter": "semi",
+              "requireLast": true
+            }
+          }
+        ]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],

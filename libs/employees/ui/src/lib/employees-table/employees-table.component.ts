@@ -25,7 +25,7 @@ import { Employee } from '@nw/employees-data-access';
   ],
 })
 export class EmployeesTableComponent extends ListComponent<Employee> {
-  displayedColumns: (keyof Employee)[] = ['EmployeeID', 'LastName', 'Title','BirthDate', 'HireDate'];
+  displayedColumns: (keyof Employee)[] = ['EmployeeID', 'LastName', 'Title', 'BirthDate', 'HireDate'];
 
   constructor() {
     super();

@@ -10,7 +10,7 @@ export abstract class ListComponent<T = unknown> {
   set _items(value: T[]) {
     this.items.set(value);
   }
-  
+
   initialOrderBy: OrderBy<T> = EMPTY;
   #orderBy = new BehaviorSubject<OrderBy<T>>(this.initialOrderBy);
   orderBy$ = this.#orderBy.asObservable();

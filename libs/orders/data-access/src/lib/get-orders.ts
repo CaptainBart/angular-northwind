@@ -4,7 +4,7 @@ import { Observable, map } from 'rxjs';
 import { ODataEnvelope, ODataOptions, formatODataParams } from '@nw/shared-data-access';
 import { Order } from './order';
 
-type OrderDto = Omit<Order, "OrderDate" | "RequiredDate" | "ShippedDate"> & {
+type OrderDto = Omit<Order, 'OrderDate' | 'RequiredDate' | 'ShippedDate'> & {
   OrderDate: string;
   RequiredDate: string;
   ShippedDate: string;
@@ -24,10 +24,10 @@ export function injectGetOrders(): getOrders {
   const http = inject(HttpClient);
   return (options?: ODataOptions<Order>) =>
     http.get<ODataEnvelope<OrderDto[]>>('https://services.odata.org/V4/Northwind/Northwind.svc/Orders', { params: formatODataParams(options) })
-    .pipe(
-      map((response) => ({
-        ...response,
-        value: response.value.map(mapDto),
-      }))
-    );
+      .pipe(
+        map(response => ({
+          ...response,
+          value: response.value.map(mapDto),
+        })),
+      );
 }
