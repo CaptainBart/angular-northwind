@@ -10,5 +10,5 @@ export type getCustomers = (options?: ODataOptions<Customer>) => Observable<GetC
 export function injectGetCustomers(): getCustomers {
   const http = inject(HttpClient);
   return (options?: ODataOptions<Customer>) =>
-    http.get<GetCustomersResponse>('https://services.odata.org/V4/Northwind/Northwind.svc/Employees', { params: formatODataParams(options) });
+    http.get<GetCustomersResponse>('https://services.odata.org/V4/Northwind/Northwind.svc/Customers', { params: formatODataParams(options) });
 }
