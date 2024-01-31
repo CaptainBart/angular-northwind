@@ -4,10 +4,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { ListComponent, MatPaginatorDirective, MatSortDirective } from '@nw/shared-data-directives';
-import { Employee } from '@nw/employees-data-access';
+import { Customer } from '@nw/customers-data-access';
 
 @Component({
-  selector: 'nw-employees-table',
+  selector: 'nw-customers-table',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
@@ -18,17 +18,18 @@ import { Employee } from '@nw/employees-data-access';
     MatSortDirective,
     MatPaginatorDirective,
   ],
-  templateUrl: './employees-table.component.html',
-  styleUrl: './employees-table.component.css',
+  templateUrl: './customers-table.component.html',
+  styleUrl: './customers-table.component.css',
   providers: [
-    { provide: ListComponent<Employee>, useExisting: forwardRef(() => EmployeesTableComponent) },
+    { provide: ListComponent<Customer>, useExisting: forwardRef(() => CustomersTableComponent) },
   ],
+  
 })
-export class EmployeesTableComponent extends ListComponent<Employee> {
-  displayedColumns: (keyof Employee)[] = ['EmployeeID', 'LastName', 'Title','BirthDate', 'HireDate'];
+export class CustomersTableComponent extends ListComponent<Customer> {
+  displayedColumns: (keyof Customer)[] = ['CustomerID', 'CompanyName', 'ContactName', 'Address', 'City', 'Country'];
 
   constructor() {
     super();
-    this.initialOrderBy = { field: 'LastName', direction: 'asc' };
+    this.initialOrderBy = { field: 'CompanyName', direction: 'asc' };
   }
 }
